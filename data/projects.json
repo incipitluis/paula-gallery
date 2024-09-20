@@ -1,0 +1,33 @@
+[
+  {
+    "title": "About me",
+    "description": "Hi! As you can see, I'm a collage artist, currently based at Madrid. I love to play with colors, shapes, and textures, and I'm always looking for new ways to express myself through this medium. I hope you enjoy my work! For inquiries and custom orders, paulasanchezmayor@gmail.com",
+    "image": "/yo.jpg",
+    "link": "/projects/hopperiana"
+  },  
+  {
+      "title": "Hopperiana",
+      "description": "Collages inspired by / using the works of Edward Hopper.",
+      "image": "/Collage 1.jpg",
+      "link": "/projects/hopperiana"
+    },
+    {
+      "title": "Otros mundos",
+      "description": "Collages inspired by surreal, sci-fi, or fantastic landscapes.",
+      "image": "/Collage 12.jpg",
+      "link": "/projects/otros-mundos"
+    },
+    {
+      "title": "Tarot",
+      "description": "A tarot deck in collage.",
+      "image": "/Tarot 4 El emperador IV.jpg",
+      "link": "/projects/tarot"
+    },
+    {
+      "title": "Femininity",
+      "description": "Playing with female bodies, shapes, and colors.",
+      "image": "/Collage 11.jpg",
+      "link": "/projects/tarot"
+    }
+  ]
+  

@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Collage Gallery POC - Homepage
 
-First, run the development server:
+This project is built with **Next.js 14** and includes interactive components and internationalization (i18n) setup. The gallery showcases collages by Paula Sánchez Mayor, featuring an interactive Hero image, dark mode, and project placeholders.
 
-```bash
+## Disclaimer
+
+The `public` folder has been included in `.gitignore` as it currently contains images of collages that are the exclusive property of **Paula Sánchez Mayor**. If you would like to explore her artwork, please visit her Instagram page: [https://www.instagram.com/paulacollage/?igsh=b3R0NzFkbWlhYjFh](https://www.instagram.com/paulacollage/?igsh=b3R0NzFkbWlhYjFh)
+
+
+## Features
+
+- **Theme Toggle**: Users can switch between light and dark modes. The theme automatically adjusts to the system settings as well.
+- **Interactive HeroImage**: The hero image dynamically changes based on the selected theme (light or dark mode).
+- **Project Carousel**: Placeholder carousel implemented for showcasing projects.
+- **Instagram Button**: Direct access to Paula Sánchez Mayor's Instagram profile.
+- **i18n Setup**: Internationalization is set up for multi-language support.
+
+## Technologies Used
+
+- **Next.js 14**: The latest version of Next.js provides server-side rendering and fast page transitions.
+- **Tailwind CSS**: For styling the components with responsive design.
+- **shadcn UI Components**: Used for building reusable and consistent UI elements across the app.
+- **i18n**: Implemented with `next-intl` for managing multiple languages seamlessly.
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-repo.git
+
+2. Install dependencies:
+
+npm install
+
+3. Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Contact
+For suggestions or contact, please reach out via email:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+luisperianezllorente@gmail.com
