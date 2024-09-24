@@ -7,6 +7,8 @@ This project is built with **Next.js 14** and includes interactive components an
 
 The `public` folder has been included in `.gitignore` as it currently contains images of collages that are the exclusive property of **Paula Sánchez Mayor**. If you would like to explore her artwork, please visit her Instagram page: [https://www.instagram.com/paulacollage/?igsh=b3R0NzFkbWlhYjFh](https://www.instagram.com/paulacollage/?igsh=b3R0NzFkbWlhYjFh)
 
+Also, THIS IS AN ONGOING PROJECT <3
+
 
 ## Features
 

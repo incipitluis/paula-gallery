@@ -23,11 +23,11 @@ const Card: React.FC<CardProps> = ({ title, description, image, link }) => {
           />
         </div>
 
-        <div className="p-4 text-center">
+        <div className="p-8 text-center">
           <h2 className="text-xl font-bold">{title}</h2>
         </div>
 
-        <div className="md:absolute md:inset-0 flex items-center justify-center p-4 bg-white bg-opacity-75 dark:bg-neutral-800 dark:bg-opacity-75 text-center transition-opacity duration-500 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
+        <div className="md:absolute md:inset-0 flex items-center justify-center px-12 pb-14 bg-white bg-opacity-75 dark:bg-neutral-800 dark:bg-opacity-75 text-center transition-opacity duration-500 ease-in-out opacity-100 md:opacity-0 group-hover:opacity-100">
           <p className="text-sm">{description}</p>
         </div>
       </div>

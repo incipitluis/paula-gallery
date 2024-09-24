@@ -14,10 +14,10 @@ const Header = () => {
   return (
     <header className="flex flex-col space-y-2 relative p-12 items-center w-screen mt-3 overflow-hidden h-80">
       <div className="flex flex-col rounded-lg mx-auto py-2 px-4 md:px-8 md:py-4 text-center text-black bg-white dark:bg-neutral-900 space-y-1 hover:scale-105 transition-all duration-300 z-20">
-        <h1 className="md:text-4xl text-2xl font-bold bg-gradient-to-r from-purple-500 dark:via-white via-black to-amber-400 dark:to-amber-400 bg-clip-text text-transparent">
+        <h1 className="md:text-4xl text-2xl font-bold text-purple-950 dark:text-purple-200">
           {t("welcome")}
         </h1>
-        <h4 className="md:text-2xl text-lg font-semibold bg-gradient-to-r from-purple-500 dark:via-white via-black to-amber-400 dark:to-amber-400 bg-clip-text text-transparent">
+        <h4 className="md:text-2xl text-lg font-semibold text-purple-950 dark:text-purple-200">
           collages
         </h4>
       </div>
