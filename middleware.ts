@@ -7,6 +7,6 @@ import {
 export default createMiddleware({locales, defaultLocale})
 
 export const config = {
-  matcher: [ '/((?!api|_next|_vercel|.*\\..*).*)', "/", /* La configuración anterior fallaba. O no se cargaban las imágenes, o no se cargaba la signin page. */
+  matcher: [ '/((?!api|_next|_vercel|.*\\..*).*)', "/",
     "/(en|es)/:path*",],
 }

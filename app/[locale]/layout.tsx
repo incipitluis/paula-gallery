@@ -27,7 +27,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={alegreya.variable}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
