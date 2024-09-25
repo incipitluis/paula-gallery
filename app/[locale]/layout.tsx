@@ -5,7 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Alegreya } from "next/font/google";
-import Footer from "../components/footer";
 
 const alegreya = Alegreya({ subsets: ["latin"], variable: "--font-alegreya" });
 
@@ -35,7 +34,6 @@ export default async function LocaleLayout({
             disableTransitionOnChange
           >
             {children}
-            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

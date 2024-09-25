@@ -9,6 +9,22 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} Paula&apos;s Art Gallery and Shop.{" "}
         {t("footer")}
       </div>
+      {/* <li className="flex-shrink-0 dark:invert">
+          <Link
+            href={
+              "https://www.instagram.com/paulacollage?igsh=b3R0NzFkbWlhYjFh"
+            }
+          >
+            <Image
+              src={"/instagram.svg"}
+              height={32}
+              width={32}
+              alt="Instagram Icon"
+              layout="fixed"
+              className="icon"
+            />
+          </Link>
+        </li> */}
     </div>
   );
 };

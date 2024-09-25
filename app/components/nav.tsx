@@ -6,26 +6,19 @@ import { useTranslations } from "next-intl";
 const NavBar = () => {
   const t = useTranslations();
   return (
-    <div className="w-full flex flex-row text-black py-3 px-6 font-semibold justify-end">
-      <ul className="flex flex-row gap-4">
+    <div className="w-full flex flex-row bg-slate-500 text-white py-8 px-12 font-semibold justify-end">
+      <ul className="flex flex-row gap-10 items-center">
+        <li className="hover:text-purple-900">
+          <Link href={""}>Projects</Link>
+        </li>
+        <li className="hover:text-purple-900">
+          <Link href={""}>About me</Link>
+        </li>
+        <li className="hover:text-purple-900">
+          <Link href={""}>Contact</Link>
+        </li>
         <li className="flex-shrink-0">
           <ModeToggle />
-        </li>
-        <li className="flex-shrink-0 dark:invert">
-          <Link
-            href={
-              "https://www.instagram.com/paulacollage?igsh=b3R0NzFkbWlhYjFh"
-            }
-          >
-            <Image
-              src={"/instagram.svg"}
-              height={32}
-              width={32}
-              alt="Instagram Icon"
-              layout="fixed"
-              className="icon"
-            />
-          </Link>
         </li>
       </ul>
     </div>

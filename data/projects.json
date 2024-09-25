@@ -1,10 +1,4 @@
-[
-  {
-    "title": "About me",
-    "description": "Click and discover a little more about me!",
-    "image": "/yo.jpg",
-    "link": "/about"
-  },  
+[  
   {
       "title": "Hopperiana",
       "description": "Collages inspired by / using the works of Edward Hopper.",
