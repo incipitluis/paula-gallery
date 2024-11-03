@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -19,6 +19,7 @@ const Card: React.FC<CardProps> = ({ title, description, image, link }) => {
             alt={title}
             layout="fill"
             objectFit="cover"
+            objectPosition="center 30%"
             className="transition-opacity duration-500 ease-in-out group-hover:opacity-50"
           />
         </div>

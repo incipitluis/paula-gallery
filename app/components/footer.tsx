@@ -1,13 +1,29 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const t = useTranslations();
   return (
-    <div className="md:hidden h-12 w-screen p-16 flex flex-col bg-white dark:bg-neutral-900">
-      <div className="flex mx-auto dark:text-white text-sm text-center items-center">
-        &copy; {new Date().getFullYear()} Paula&apos;s Art Gallery and Shop.{" "}
-        {t("footer")}
+    <div className="w-full p-16 flex flex-col bg-stone-400 text-white dark:text-purple-200">
+      <div className="flex justify-between items-center">
+        <div className="text-sm">
+          &copy; {new Date().getFullYear()} Paula&apos;s Art Gallery and Shop.{" "}
+          {t("footer")}
+        </div>
+        <Link
+          href="https://www.instagram.com/paulacollage?igsh=b3R0NzFkbWlhYjFh"
+          className="flex-shrink-0"
+        >
+          <Image
+            src="/instagram.svg"
+            height={32}
+            width={32}
+            alt="Instagram Icon"
+            className="icon invert"
+          />
+        </Link>
       </div>
     </div>
   );
