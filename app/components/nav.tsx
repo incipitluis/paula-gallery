@@ -1,40 +1,71 @@
+"use client";
+
+import React, { useState } from "react";
 import { ModeToggle } from "@/components/ui/mode-toggle";
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { Menu, X } from "lucide-react";
 
 const NavBar = () => {
   const t = useTranslations();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    <div className="flex flex-row w-full py-3 px-6 justify-evenly items-center">
-      <div className="hidden md:flex mx-auto dark:text-white text-sm text-start">
-        &copy; {new Date().getFullYear()} Paula&apos;s Art Gallery and Shop.{" "}
-        {t("footer")}
-      </div>
-      <div className="w-full flex text-black font-semibold justify-end">
-        <ul className="flex flex-row gap-4">
-          <li className="flex-shrink-0">
-            <ModeToggle />
+    <nav className="w-full bg-stone-500 text-white py-4 px-6 md:py-8 md:px-12">
+      <div className="flex justify-between items-center">
+        <div className="flex-shrink-0">
+          <ModeToggle />
+        </div>
+        <ul className="hidden md:flex flex-row gap-10 items-center text-lg">
+          <li className="hover:text-purple-300 hover:scale-110 transition-all duration-300">
+            <Link href="">Projects</Link>
           </li>
-          <li className="flex-shrink-0 dark:invert">
-            <Link
-              href={
-                "https://www.instagram.com/paulacollage?igsh=b3R0NzFkbWlhYjFh"
-              }
-            >
-              <Image
-                src={"/instagram.svg"}
-                height={39}
-                width={39}
-                alt="Instagram Icon"
-                layout="fixed"
-                className="icon"
-              />
-            </Link>
+          <li className="hover:text-purple-300 hover:scale-110 transition-all duration-300">
+            <Link href="">About me</Link>
+          </li>
+          <li className="hover:text-purple-300 hover:scale-110 transition-all duration-300">
+            <Link href="">Contact</Link>
           </li>
         </ul>
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
       </div>
-    </div>
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white dark:bg-stone-900 z-50 flex flex-col items-center justify-center">
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-6 text-stone-900 dark:text-white focus:outline-none"
+          >
+            <X size={24} />
+          </button>
+          <ul className="flex flex-col gap-8 items-center text-2xl text-stone-900 dark:text-white">
+            <li className="hover:text-purple-300 hover:scale-110 transition-all duration-300">
+              <Link href="" onClick={toggleMenu}>
+                Projects
+              </Link>
+            </li>
+            <li className="hover:text-purple-300 hover:scale-110 transition-all duration-300">
+              <Link href="" onClick={toggleMenu}>
+                About me
+              </Link>
+            </li>
+            <li className="hover:text-purple-300 hover:scale-110 transition-all duration-300">
+              <Link href="" onClick={toggleMenu}>
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 };
 
