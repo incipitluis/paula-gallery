@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Card from "./card";
-import projectsData from "@/data/projects.json";
+import projectsData from "@/projects-data/projects.json";
 
 export default function CardCarousel() {
   const [orientation, setOrientation] = useState<"horizontal" | "vertical">(

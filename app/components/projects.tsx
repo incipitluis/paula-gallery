@@ -1,4 +1,3 @@
-import React from "react";
 import CardCarousel from "./card-carousel";
 
 const Projects = () => {

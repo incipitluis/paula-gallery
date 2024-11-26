@@ -6,7 +6,8 @@ import { getMessages } from "next-intl/server";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Alegreya } from "next/font/google";
 import Footer from "../components/footer";
-
+import { ClerkProvider } from "@clerk/nextjs";
+import NavBar from "../components/nav";
 const alegreya = Alegreya({ subsets: ["latin"], variable: "--font-alegreya" });
 
 export const metadata: Metadata = {
@@ -25,20 +26,22 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className={alegreya.variable}>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
+    <ClerkProvider>
+      <html lang={locale}>
+        <body className={`${alegreya.variable} bg-white dark:bg-neutral-900`}>
+          <NextIntlClientProvider messages={messages}>
+            <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
+            <NavBar />
             {children}
-            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
