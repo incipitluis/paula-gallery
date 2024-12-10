@@ -9,7 +9,7 @@ const SideBar = () => {
   const menuItems = [
     {
       name: t("create-project"),
-      href: "/admin/create-project",
+      href: "/admin/projects",
     },
     {
       name: t("upload-products"),

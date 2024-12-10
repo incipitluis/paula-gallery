@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import { CldImage } from "next-cloudinary";
 import { useTheme } from "next-themes";
 
 const Hero = () => {
@@ -23,11 +23,11 @@ const Hero = () => {
       </div>
       <div className="w-full md:w-2/3 mt-8 md:mt-0">
         <div className="relative w-full hidden md:block aspect-[4/3] lg:aspect-[16/9] max-w-[850px] mx-auto">
-          <Image
+          <CldImage
             src={heroImageSrc}
             alt="hero image"
-            layout="fill"
-            objectFit="cover"
+            width={850}
+            height={600}
             className="rounded-xl"
           />
         </div>
