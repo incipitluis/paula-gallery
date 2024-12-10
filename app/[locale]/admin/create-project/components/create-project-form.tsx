@@ -43,11 +43,11 @@ export default function CreateProjectForm() {
     e.preventDefault();
     try {
       const values = form.getValues();
-      const result = await createProject({
-        ...values,
-        date: new Date(values.date)
-      });
-      console.log('Project created:', result);
+      const name = values.name;
+      const date = values.date;
+      const description = values.description;
+      await createProject(name, date, description);
+      console.log('Project created');
     } catch (error) {
       console.error('Error creating project:', error);
     }
@@ -79,7 +79,7 @@ export default function CreateProjectForm() {
                     <Input 
                       placeholder="Enter project name" 
                       {...field}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-200"
                     />
                   </FormControl>
                   <FormDescription className="text-xs text-gray-500 dark:text-gray-400">
@@ -102,7 +102,7 @@ export default function CreateProjectForm() {
                     <Input 
                       type="date" 
                       {...field}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-200"
                     />
                   </FormControl>
                   <FormMessage className="text-sm text-red-500" />
@@ -122,7 +122,7 @@ export default function CreateProjectForm() {
                     <Textarea
                       placeholder="Enter project description"
                       {...field}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white transition-colors duration-200 min-h-[120px]"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 text-gray-900 dark:text-gray-100 transition-colors duration-200 min-h-[120px]"
                     />
                   </FormControl>
                   <FormDescription className="text-xs text-gray-500 dark:text-gray-400">

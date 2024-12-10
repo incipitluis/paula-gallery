@@ -46,19 +46,19 @@ export function SearchProject({ onProjectSelect }: SearchProjectProps) {
     setSearchResults(data as ProjectSearchResult[])
   }, 500)
 
-  const handleSelect = (id: string) => {
-    setSearchInput(id)
-    onProjectSelect(id)
+  const handleSelect = (result: ProjectSearchResult) => {
+    setSearchInput(result.name)
+    onProjectSelect(result.id)
     setIsSearchPopoverOpen(false)
     setIsSelectedProject(true)
   }
 
   return (
-    <div className="relative">
-      <div className="flex flex-row gap-2 items-center">
+    <div className="relative text-gray-500">
+      <div className="flex flex-row gap-2 items-center min-w-64">
         <SearchIcon className="w-4 h-4" />
         <input
-          className="min-w-64 px-4 py-2 border border-slate-700"
+          className="w-full px-4 py-2 border-b border-slate-700 focus:outline-none text-slate-900 dark:text-white"
           type="text"
           value={searchInput}
           onChange={handleSearchInputChange}
@@ -85,7 +85,7 @@ export function SearchProject({ onProjectSelect }: SearchProjectProps) {
       </div>
       <div
         className={cn(
-          "absolute top-10 left-0 w-64 border border-slate-700 flex flex-col bg-white z-20 max-h-72 overflow-y-auto rounded-b-md scrollbar-hide",
+          "absolute top-10 left-0 w-full shadow-md flex flex-col bg-white z-20 max-h-72 overflow-y-auto rounded-b-md scrollbar-hide",
           isSearchPopoverOpen ? "block" : "hidden",
         )}
       >
@@ -94,20 +94,13 @@ export function SearchProject({ onProjectSelect }: SearchProjectProps) {
             <div
             key={result.id}
             className="relative px-4 py-2 hover:bg-slate-700 hover:text-white cursor-pointer flex gap-2 justify-between items-center border-b border-b-slate-300"
-            onClick={() => handleSelect(result.id)}
+            onClick={() => handleSelect(result)}
           >
             {result.name}
-            <span
-              className={cn(
-                "absolute top-0 right-0 flex items-center font-bold py-0 text-slate-500 px-2 text-xs shadow-md opacity-80",
-              )}
-            >
-              {result.name}
-            </span>
             </div>
           ))
         ) : (
-          <div className="px-4 py-2 text-gray-500 dark:text-gray-400">No results found</div>
+          <div className="px-4 py-2 text-gray-500 cursor-pointer flex gap-2 justify-between items-center border-b border-b-slate-300">No results found</div>
         )}
       </div>
     </div>
